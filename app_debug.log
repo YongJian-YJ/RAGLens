@@ -1,0 +1,89 @@
+2024-11-25 16:53:02,037 - ERROR - Error in Default Retrieval retrieval: default_retrieval() got multiple values for argument 'retriever'
+2024-11-25 16:53:02,040 - ERROR - Error in LLMLingua retrieval: llmlingua_retrieval() got multiple values for argument 'retriever'
+2024-11-25 16:53:08,459 - ERROR - Error in Default Retrieval retrieval: default_retrieval() got multiple values for argument 'retriever'
+2024-11-25 16:53:08,462 - ERROR - Error in LLMLingua retrieval: llmlingua_retrieval() got multiple values for argument 'retriever'
+2024-11-25 16:54:47,922 - ERROR - Error in LLMLingua Retrieval: cannot schedule new futures after interpreter shutdown
+2024-11-26 10:17:22,835 - ERROR - Error in recommending question: unhashable type: 'dict'
+2024-12-05 22:39:37,467 - ERROR - Error in LLMLingua Retrieval: name 'llm' is not defined
+2024-12-05 22:42:56,443 - ERROR - Error in FlashRank Retrieval: name 'llm' is not defined
+2024-12-06 11:41:43,383 - ERROR - Error in Default Retrieval: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}
+2024-12-06 11:42:52,486 - ERROR - Error in Default Retrieval: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}
+2024-12-06 11:43:07,212 - ERROR - Error in Default Retrieval: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}
+2024-12-07 13:31:01,211 - ERROR - Error in evaluating question: Missing some input keys: {''}
+2024-12-07 13:34:29,760 - ERROR - Error in evaluating question: "Input to PromptTemplate is missing variables {''}.  Expected: [''] Received: ['context', 'question']\nNote: if you intended {} to be part of the string and not a variable, please escape it with double curly braces like: '{{}}'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT "
+2024-12-07 13:44:55,977 - ERROR - Error in evaluating question: "Input to PromptTemplate is missing variables {''}.  Expected: [''] Received: ['context', 'question']\nNote: if you intended {} to be part of the string and not a variable, please escape it with double curly braces like: '{{}}'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT "
+2024-12-07 13:45:52,859 - ERROR - Error in evaluating question: "Input to PromptTemplate is missing variables {'file_content', 'question_type'}.  Expected: ['context', 'file_content', 'question_type'] Received: ['context', 'question']\nNote: if you intended {file_content} to be part of the string and not a variable, please escape it with double curly braces like: '{{file_content}}'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT "
+2024-12-07 13:46:58,361 - ERROR - Error in evaluating question: "Input to PromptTemplate is missing variables {'file_content', 'question_type'}.  Expected: ['context', 'file_content', 'question_type'] Received: ['context', 'question']\nNote: if you intended {file_content} to be part of the string and not a variable, please escape it with double curly braces like: '{{file_content}}'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT "
+2024-12-07 13:49:38,917 - ERROR - Error in evaluating question: "Input to PromptTemplate is missing variables {'file_content', 'question_type', 'context'}.  Expected: ['context', 'file_content', 'question_type'] Received: ['question', 'document', 'generated_output']\nNote: if you intended {file_content} to be part of the string and not a variable, please escape it with double curly braces like: '{{file_content}}'.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_PROMPT_INPUT "
+2024-12-10 10:06:58,459 - ERROR - Error in Default Retrieval retrieval: Cannot hash argument 'retriever' (of type `langchain_core.vectorstores.base.VectorStoreRetriever`) in 'default_retrieval'.
+
+To address this, you can tell Streamlit not to hash this argument by adding a
+leading underscore to the argument's name in the function signature:
+
+```
+@st.cache_resource
+def default_retrieval(_retriever, ...):
+    ...
+```
+            
+2024-12-10 10:07:19,854 - ERROR - Error in Default Retrieval retrieval: Cannot hash argument 'retriever' (of type `langchain_core.vectorstores.base.VectorStoreRetriever`) in 'default_retrieval'.
+
+To address this, you can tell Streamlit not to hash this argument by adding a
+leading underscore to the argument's name in the function signature:
+
+```
+@st.cache_resource
+def default_retrieval(_retriever, ...):
+    ...
+```
+            
+2024-12-10 10:07:49,633 - ERROR - Error in Default Retrieval retrieval: Cannot hash argument 'retriever' (of type `langchain_core.vectorstores.base.VectorStoreRetriever`) in 'default_retrieval'.
+
+To address this, you can tell Streamlit not to hash this argument by adding a
+leading underscore to the argument's name in the function signature:
+
+```
+@st.cache_resource
+def default_retrieval(_retriever, ...):
+    ...
+```
+            
+2024-12-10 10:09:51,832 - ERROR - Error in FlashRank retrieval: Cannot hash argument 'retriever' (of type `langchain_core.vectorstores.base.VectorStoreRetriever`) in 'flashrank_retrieval'.
+
+To address this, you can tell Streamlit not to hash this argument by adding a
+leading underscore to the argument's name in the function signature:
+
+```
+@st.cache_resource
+def flashrank_retrieval(_retriever, ...):
+    ...
+```
+            
+2024-12-10 14:58:20,288 - ERROR - Error in Default Retrieval: Error code: 400 - {'error': {'message': "The response was filtered due to the prompt triggering Azure OpenAI's content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766", 'type': None, 'param': 'prompt', 'code': 'content_filter', 'status': 400, 'innererror': {'code': 'ResponsibleAIPolicyViolation', 'content_filter_result': {'hate': {'filtered': False, 'severity': 'safe'}, 'self_harm': {'filtered': False, 'severity': 'safe'}, 'sexual': {'filtered': False, 'severity': 'safe'}, 'violence': {'filtered': True, 'severity': 'low'}}}}}
+2024-12-10 14:58:22,068 - ERROR - Error in Default Retrieval: Error code: 400 - {'error': {'message': "The response was filtered due to the prompt triggering Azure OpenAI's content management policy. Please modify your prompt and retry. To learn more about our content filtering policies please read our documentation: https://go.microsoft.com/fwlink/?linkid=2198766", 'type': None, 'param': 'prompt', 'code': 'content_filter', 'status': 400, 'innererror': {'code': 'ResponsibleAIPolicyViolation', 'content_filter_result': {'hate': {'filtered': False, 'severity': 'safe'}, 'self_harm': {'filtered': False, 'severity': 'safe'}, 'sexual': {'filtered': False, 'severity': 'safe'}, 'violence': {'filtered': True, 'severity': 'low'}}}}}
+2025-01-08 15:41:12,764 - ERROR - Error in LLMLingua Retrieval: name 'shorter_prompt' is not defined
+2025-01-08 15:41:18,230 - ERROR - Error in Parent Child Retrieval: Got a larger chunk overlap (200) than chunk size (100), should be smaller.
+2025-01-08 15:46:04,957 - ERROR - Error in Parent Child Retrieval: Got a larger chunk overlap (200) than chunk size (100), should be smaller.
+2025-01-08 15:47:47,130 - ERROR - Error in Parent Child Retrieval: Got a larger chunk overlap (200) than chunk size (100), should be smaller.
+2025-01-08 15:48:08,416 - ERROR - Error in Parent Child Retrieval: st.session_state has no attribute "chunk_size". Did you forget to initialize it? More info: https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization
+2025-01-08 15:49:20,618 - ERROR - Error in Parent Child Retrieval: Got a larger chunk overlap (200) than chunk size (100), should be smaller.
+2025-01-08 15:53:57,778 - ERROR - Error in Parent Child Retrieval: 1 validation error for ParentDocumentRetriever
+vectorstore
+  Input should be an instance of VectorStore [type=is_instance_of, input_value=VectorStoreRetriever(tags...6620>, search_kwargs={}), input_type=VectorStoreRetriever]
+    For further information visit https://errors.pydantic.dev/2.10/v/is_instance_of
+2025-01-08 15:55:16,368 - ERROR - Error in Parent Child Retrieval: 'VectorStoreRetriever' object has no attribute 'as_retriever'
+2025-01-08 15:57:09,397 - ERROR - Error in Default Retrieval: unsupported operand type(s) for |: 'Chroma' and 'function'
+2025-01-08 16:03:16,959 - ERROR - Error in Default Retrieval: unsupported operand type(s) for |: 'Chroma' and 'function'
+2025-01-21 16:58:27,774 - ERROR - Error in Reciprocal Retrieval: too many values to unpack (expected 2)
+2025-01-21 16:58:36,196 - ERROR - Error in Reciprocal Retrieval: too many values to unpack (expected 3)
+2025-01-21 17:00:07,128 - ERROR - Error in Reciprocal Retrieval: too many values to unpack (expected 2)
+2025-03-04 16:20:43,954 - ERROR - Error in Default Retrieval: Error code: 429 - {'error': {'code': '429', 'message': 'Requests to the ChatCompletions_Create Operation under Azure OpenAI API version 2024-10-21 have exceeded token rate limit of your current AIServices S0 pricing tier. Please retry after 60 seconds. Please contact Azure support service if you would like to further increase the default rate limit.'}}
+2025-03-04 16:21:15,463 - ERROR - Error in Reciprocal Retrieval: too many values to unpack (expected 4)
+2025-03-04 16:36:52,621 - ERROR - Error in Default Retrieval: Error code: 429 - {'error': {'code': '429', 'message': 'Requests to the ChatCompletions_Create Operation under Azure OpenAI API version 2024-10-21 have exceeded token rate limit of your current AIServices S0 pricing tier. Please retry after 60 seconds. Please contact Azure support service if you would like to further increase the default rate limit.'}}
+2025-03-04 16:37:29,427 - ERROR - Error in Reciprocal Retrieval: too many values to unpack (expected 4)
+2025-03-04 16:45:35,004 - ERROR - Error in Reciprocal Retrieval: too many values to unpack (expected 4)
+2025-03-04 17:27:28,723 - ERROR - Error in Parent Child Retrieval: too many values to unpack (expected 2)
+2025-03-04 17:31:42,623 - ERROR - Error in Parent Child Retrieval: too many values to unpack (expected 2)
+2025-03-05 09:45:38,627 - ERROR - Error in recommending question: Error code: 429 - {'error': {'code': '429', 'message': 'Requests to the ChatCompletions_Create Operation under Azure OpenAI API version 2024-10-21 have exceeded token rate limit of your current AIServices S0 pricing tier. Please retry after 60 seconds. Please contact Azure support service if you would like to further increase the default rate limit.'}}
+2025-03-05 09:49:11,283 - ERROR - Error in recommending question: Error code: 429 - {'error': {'code': '429', 'message': 'Requests to the ChatCompletions_Create Operation under Azure OpenAI API version 2024-10-21 have exceeded token rate limit of your current AIServices S0 pricing tier. Please retry after 60 seconds. Please contact Azure support service if you would like to further increase the default rate limit.'}}
+2025-03-05 09:50:43,487 - ERROR - Error in recommending question: name 'model' is not defined

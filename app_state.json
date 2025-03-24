@@ -1,0 +1,6 @@
+{
+    "chunk_size": 1200,
+    "chunk_overlap": 200,
+    "active_directory": "default",
+    "llm_type": "local"
+}
