@@ -1,7 +1,3 @@
-# conda activate chat-with-website
-# streamlit run flashRank.py
-# code from https://medium.com/@nageshmashette32/langchain-rag-fusion-advance-rag-32eefc63da99
-
 import bs4
 import os
 import streamlit as st  # type: ignore
